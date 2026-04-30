@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bury Me In The Rift - 规则书第 1 页</title>
+    <style>
+        :root { --main-red: #e63946; --text-color: #333; --bg-color: #f4f4f4; }
+
+        body {
+            font-family: "Georgia", "PingFang SC", "Microsoft YaHei", serif;
+            line-height: 1.65;
+            color: var(--text-color);
+            background: var(--bg-color);
+            margin: 0;
+            padding: 12px;
+        }
+
+        .page {
+            max-width: 600px;
+            background: white;
+            margin: 0 auto;
+            padding: 20px 18px 60px;
+            box-shadow: 0 0 12px rgba(0,0,0,0.08);
+            position: relative;
+        }
+
+        /* Logo */
+        .logo-container { text-align: center; margin-bottom: 20px; }
+        .logo-placeholder img {
+            width: 70%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* 版本信息 */
+        .version-info {
+            text-align: center;
+            font-size: 12px;
+            color: #888;
+            margin-bottom: 20px;
+        }
+
+        /* 导语 */
+        .intro {
+            font-style: italic;
+            border-top: 1px solid #eee;
+            border-bottom: 1px solid #eee;
+            padding: 12px 0;
+            margin-bottom: 28px;
+            font-size: 14px;
+        }
+
+        /* 章节标题 */
+        .section-title {
+            font-size: 22px;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin: 0 0 16px;
+            border-bottom: 2px solid #000;
+            display: inline-block;
+        }
+
+        /* 组件列表 */
+        .component-group { margin-bottom: 22px; }
+        .group-header { font-weight: bold; font-size: 16px; margin-bottom: 6px; }
+        .sub-list { list-style: none; padding-left: 16px; margin: 0; font-size: 14px; }
+        .sub-list li { margin-bottom: 4px; }
+
+        /* 图片自然融入内容（无框体） */
+        .content-image {
+            width: 30%;
+            max-width: 50%;   /* 控制图片最大宽度 */
+            height: auto;
+            display: block;
+            margin: 10px auto;  /* 自动居中 + 缩小间距 */
+        }
+       .content-image1 {
+            width: 100%;
+            height: auto;
+            display: block;
+            margin: 10px auto;  /* 自动居中 + 缩小间距 */
+        }
+
+        /* 强调文字 */
+        b { font-weight: 800; }
+
+        /* 页码 */
+        .page-number {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<div class="page">
+
+    <!-- Logo -->
+    <div class="logo-container">
+        <div class="logo-placeholder">
+            <img src="https://img.xiaopiu.com/userImages/img133019db4c45d08.png" alt="BURY ME IN THE RIFT LOGO">
+        </div>
+    </div>
+
+    <!-- 作者与版本信息 -->
+    <div class="version-info">
+        第二版 (Second Edition)，规则版本 0.1<br>
+        Matthew Bishop 设计与绘图<br>
+        Gruwuwu 汉化制作
+    </div>
+
+    <!-- 导语 -->
+    <div class="intro">
+        入侵！你的 2 机甲小队必须保护城市免受巨型怪物的侵害，同时在跨越 6 场游戏的战役中完成目标以赚取升级。
+    </div>
+
+    <!-- 内容（上下结构） -->
+    <h2 class="section-title">组件 (COMPONENTS)</h2>
+
+    <div class="component-group">
+        <div class="group-header">9 张卡牌 (9 Cards)</div>
+        <ul class="sub-list">
+            <li>8 张机甲卡 (8 Mech cards)</li>
+            <li>8 张飞行员卡（迷你） (8 Pilot cards (mini))</li>
+            <li>6 张地图卡 (6 Map cards)</li>
+            <li>6 张目标卡（迷你） (6 Objective cards (mini))</li>
+            <li>6 张怪物卡 (6 Monster cards)</li>
+            <li>1 张战役卡 (1 Campaign card)</li>
+            <li>1 张参考卡 (1 Reference card)</li>
+        </ul>
+    </div>
+
+    <div class="component-group">
+        <div class="group-header">4 颗骰子 (4 dice)</div>
+        <ul class="sub-list">
+            <li>1 颗机甲 A 骰子（绿色） (1 Mech A die (green))</li>
+            <li>1 颗机甲 B 骰子（蓝色） (1 Mech B die (blue))</li>
+            <li>1 颗战役骰子（任意颜色） (1 Campaign die (any color))</li>
+            <li>1 颗怪物骰子（任意颜色） (1 Monster die (any color))</li>
+        </ul>
+    </div>
+
+    <div class="component-group">
+        <div class="group-header">20 个配件 (20 pieces)</div>
+        <ul class="sub-list">
+            <li>4 个怪物算子（颜色 1-4） (4 Monster meeples (colors 1-4))</li>
+            <li>4 个怪物方块（颜色 1-4） (4 Monster cubes (colors 1-4))</li>
+            <li>3 个废墟标记 (3 Ruin tokens)</li>
+            <li>9 个状态标记 (9 Status tokens)</li>
+        </ul>
+    </div>
+
+    <!-- 图片自然融入内容（上下结构） -->
+    <img class="content-image" src="https://img.xiaopiu.com/userImages/img43119db8736318.png" alt="Components Diagram">
+
+    <!-- 页码 -->
+    <div class="page-number">1</div>
+
+    
+</div>
+<div class="page">
+    <h2 class="section-title">设置 (SETUP)</h2>
+    
+    <p>摆放好<b>战役卡 (campaign card)</b>（任选一面）。将战役骰子设置在“Game 1”位置，显示点数为 6。然后：</p>
+    
+    <ol>
+        <li>将 2 张随机的<b>地图卡 (map cards)</b>并排放置（左侧翻至 L 面，右侧翻至 R 面）。</li>
+        <li>将一名随机<b>飞行员 (pilot)</b>塞入<b>机甲 (mech)</b>下方（随机选择，或使用该飞行员的初始机甲），使 3 行升级行被隐藏。然后用战役卡的“mech A”部分盖住机甲的 3 行升级行。</li>
+        <li>对第二名<b>飞行员</b>、<b>机甲</b>以及参考卡的“mech B”部分重复上述操作。</li>
+        <li>将 3 张随机<b>怪物卡 (monster cards)</b>排成一排。</li>
+        <li>根据<b>战役 (Campaign)</b>章节放置相应的<b>目标卡 (objective cards)</b>。</li>
+    </ol>
+
+    <p>怪兽在地图上有对应的<b>算子 (meeples)</b>，并在其对应的怪物卡上有匹配的<b>HP方块 (HP cubes)</b>用于识别。机甲通过骰子颜色识别，参照战役卡上的 mech A/B 图示。</p>
+    
+    <ul>
+        <li><b>3 只怪物</b>起始在地图上。掷怪物骰，将其放在第一张怪物卡上，并遵循<b>探测 (Detect)</b>规则放置怪物，将相应的 HP 方块放在它们的卡牌上。
+            <ul class="sub-list">
+                <li>对于你的第一场游戏，只需按照下图所示放置怪物算子和 HP 方块。</li>
+            </ul>
+        </li>
+        <li>将机甲骰子部署在地图<b>前 2 行 (top 2 rows)</b>的任何位置（不要放在建筑或山脉上），点数显示为机甲的 HP。</li>
+        <li>将第 4 个怪物算子 + 方块、废墟标记和状态标记放在附近备用。</li>
+    </ul>
+
+    <!-- 图示说明区域 -->
+    <div class="diagram-container">
+        <span class="diagram-label">图示布局说明 (Diagram Context)</span>
+        <div class="diagram-content">
+            展示了完整的游戏初始设置。上方为拼接的地图，包含机甲骰子和初始怪物算子。地图右侧展示了状态标记堆和算子备用件。下方展示了飞行员卡（SHIVA）与机甲卡的叠加状态，以及三张带有“ALPHA”标识的怪物卡（NIGHTMARE, DEMON, WRAITH），怪物骰子位于最左侧。
+        </div>
+
+        <!-- 预留图片位置，后期请在 src 中插入您的图片链接 -->
+        <img src="https://img.xiaopiu.com/userImages/img133419db4c723f8.png" alt="Game Setup Diagram" class="content-image1">
+    </div>
+
+    <!-- 页码 -->
+    <div class="page-number">2</div>
+ 
+
+
+</div> 
+
+<div class="page">
+    <h2 class="section-title">目标 (GOAL)</h2>
+    <p>通过<b>坚持存活 5 个回合</b>获胜，怪物会尝试<b>摧毁建筑和机甲 (destroy buildings and mechs)</b>。你将利用机甲的攻击造成伤害并重新定位它们以防止上述情况发生。</p>
+    <p>如果你的两台机甲全部阵亡，或者你用光了放置在被毁建筑上的废墟方块，你将输掉整个战役！</p>
+
+    <h2 class="section-title">单位 (UNITS)</h2>
+    <p>单位（机甲和怪物）有两个主要属性：<b>移动力 (movement)</b> 和 <b>HP (生命值/hit points)</b>。它们还拥有 <b>1 种攻击方式 (1 attack)</b>（机甲可能通过飞行员升级获得第二种攻击），它们以此瞄准目标造成伤害或产生其他影响。</p>
+    <p>单位使用移动力在地图上旅行，在<b>正交 (orthogonal)</b>相邻的格点间移动（禁止对角线）。</p>
+    <ul>
+        <li>单位不能穿过障碍物或<b>敌方单位</b>，且必须在<b>空位 (empty tile)</b>（无建筑、山脉或单位）结束移动。</li>
+        <li>位于水域格的机甲不能攻击。位于水域格的怪物会<b>死亡</b>（跳跃或飞行怪物有一些例外情况）。</li>
+        <li><b>飞行单位 (Flying units)</b>可以飞越任何物体，且忽略水域。<b>跳跃单位 (Leaping units)</b>可以跳过任何物体，但在停止移动后会受到水域影响。飞行单位仍必须在空位结束移动。</li>
+    </ul>
+    <p>当单位的 HP 因伤害降至 0 时<b>死亡 (die)</b>。机甲用骰子值追踪 HP。怪物用其怪物卡上的 HP 方块追踪它。</p>
+    <p>Alpha 怪物拥有它们自己的属性、HP 轨道，以及用<b>蓝色</b>标示的攻击方式。</p>
+
+    <h2 class="section-title">攻击示例 (ATTACK EXAMPLES)</h2>
+    <ul>
+        <li><span class="icon">🎯</span> 范围 <b>1</b>：命中一个相邻格。造成 1 点伤害。</li>
+        <li><span class="icon">🎯</span> 范围 <b>2</b>：命中直线方向上恰好 2 格远的格子，跳过中间的一切。造成 1 点伤害。</li>
+        <li><span class="icon">🎯</span> 范围 <b>2+</b>：同上，但如果需要可以瞄准更远。仍必须在有效的格子结束，不能超出地图边缘。</li>
+        <li><span class="icon">🎯</span> 范围 <b>6+</b>：沿直线行进最多 6 格，击中物体即停止。造成 1 点伤害。</li>
+    </ul>
+   <!-- 页码 -->
+    <div class="page-number">3</div>
+  </div>
+<div class="page">
+    <!-- 1. 顶部：卡牌属性标注图示 -->
+    <div class="diagram-container">
+        <span class="diagram-label">卡牌属性标注图示 (Card Legend Diagram)</span>
+        <!-- 此处插入顶部属性说明图片链接 -->
+        <img src="https://img.xiaopiu.com/userImages/img133519db4c785a0.png" alt="Card Legend Diagram" class="content-image1">
+        <div class="diagram-content">
+            <b>机甲卡 (OSIRIS)：</b>标注了 ATTACK (攻击方向)、UPGRADES (升级行)。<br>
+            <b>机甲骰子 (MECH DIE)：</b>代表当前 HP。<br>
+            <b>怪物卡 (DEMON)：</b>标注了 HP ❤️ & MOVEMENT 👟 (移动力)、ATTACK (攻击方式)、HP CUBE (HP 方块)、HP TRACK (HP 轨道)、COMPASS (指南针图标)、SEEK (寻觅图标)。<br>
+            <b>怪物算子 (MONSTER MEEPLE)：</b>代表怪物在地图上的指示物。
+        </div>
+        
+    </div>
+
+    <!-- 2. 中间：规则文本 -->
+    <p>某些攻击会<b>推移 (push)</b> 目标（将其移开 1 格），添加<b>状态 (status)</b> 标记到目标，或产生其他效果。</p>
+    <ul>
+        <li>每当一个单位被推向一个<b>非空位 (non-empty tile)</b>时，位置不会发生移动，取而代之的是双方各受到 <b>1 点撞击伤害 (bump damage)</b>（地图边缘不会造成伤害）。</li>
+        <li>在移除一个 0 HP 的单位前，先结算所有的推移和撞击伤害；单位在死亡时仍能造成撞击伤害。</li>
+    </ul>
+
+    <p>当一个<b>建筑 (building)</b> 受到伤害时，从供应堆放置一个<b>废墟方块 (ruin cube)</b> 在上面（如果你无法放置，则失败！）。该格子现在被视为“空位”。建筑格标有小的 <b>+</b> 符号（炮塔和火箭也是建筑）。</p>
+
+    <!-- 3. 底部：战斗图示说明 -->
+    <div class="diagram-container">
+        <span class="diagram-label">战斗与废墟图示 (Combat & Ruin Diagram)</span>
+        <!-- 此处插入底部战斗示例图片链接 -->
+        <img src="https://img.xiaopiu.com/userImages/img133619db4c7f6e8.png" alt="Combat Diagram" class="content-image1">
+        <div class="diagram-content">
+            展示了地图上的攻击范围与推移效果：<br>
+            • <b>RUIN (废墟)：</b>指向被废墟方块覆盖的建筑格。<br>
+            • <b>1：</b>展示了机甲对相邻格的攻击。<br>
+            • <b>2+：</b>展示了机甲对远程目标的直线攻击。<br>
+            • <b>6*：</b>展示了底部粉色怪物发出的贯通直线攻击。
+        </div>
+        
+    </div>
+
+    <!-- 还原原图页码 -->
+    <div class="page-number">4</div>
+  </div>
+<div class="page">
+    <h2 class="section-title">回合流程 (TURN ORDER)</h2>
+    <p><b>每个回合 (Each turn)：</b></p>
+    
+    <ul class="turn-list">
+        <li><b class="step-num">1.</b> <b class="step-name">时间流逝 (Time passes)</b>：战役骰（显示剩余回合数）数值减 1。如果数值达到 0，你立即赢得当前游戏。</li>
+        <li><b class="step-num">2.</b> <b class="step-name">生成 (Spawn)</b>：新的怪物在它们上一轮被探测到的位置生成（where they were detected last turn）。</li>
+        <li><b class="step-num">3.</b> <b class="step-name">投骰 + 推进 (Roll + advance)</b>：投掷怪物骰并将其移动到排中的下一张怪物卡（如有需要则循环/wrap around）。将其放置在白框内。</li>
+        <li><b class="step-num">4.</b> <b class="step-name">怪物移动 + 瞄准 (Monsters move + aim)</b>：每只怪物（按卡牌顺序）进行移动并瞄准一次攻击（目标为机甲或建筑）。</li>
+        <li><b class="step-num">5.</b> <b class="step-name">探测 (Detect)</b>：探测新的怪物（它们将在下一轮生成）。</li>
+        <li><b class="step-num">6.</b> <b class="step-name">玩家行动 (Player actions)</b>：玩家可以移动每台机甲和/或使用它们进行攻击，顺序或组合自选。一旦机甲发动攻击，它就不能再执行任何动作。</li>
+        <li><b class="step-num">7.</b> <b class="step-name">维护 (Upkeep)</b>：任何带有“Upkeep”关键字的效果在此发生（如火焰伤害或地图效果）。</li>
+        <li><b class="step-num">8.</b> <b class="step-name">怪物攻击 (Monsters attack)</b>：怪物攻击结算（即使它们的目标已经发生了改变！）。</li>
+    </ul>
+
+    <div class="diagram-container">
+        <span class="diagram-label">图示布局与示例说明 (Diagram Context)</span>
+                <!-- 此处插入顶部属性说明图片链接 -->
+        <img 
+  src="https://img.xiaopiu.com/userImages/img136419db4d193d8.png" 
+  alt="Card Legend Diagram" 
+  class="content-image1"
+  style="width:100%;height:auto;"
+>
+        <div class="diagram-content">
+            <p><b>左侧地图（初始状态）：</b>展示了两张并排放置的板块。右侧板块包含建筑 A、B 和机甲 C。橙色怪物算子位于交界处，红色怪物算子位于右上角区域。下方显示三张 Alpha 怪物卡。怪物骰（点数为 4）位于 DEMON 卡牌下方，带有 <b>ACTIVATE</b> 激活条。</p>
+            <p><b>右侧地图（动作执行）：</b>展示了具体的移动路径。红色算子向左移动并瞄准建筑 A（黑色贯通长箭头）；橙色算子向右下方移动并瞄准机甲 C（直角折线箭头）。黑色虚线框表示移动后的列位置。</p>
+            <p><b>详细标注：</b>中心位置展示了指南针和寻觅图标。右下角标注了 <b>COLUMN 4</b> 及其对应的骰子面图示。</p>
+        </div>
+    </div>
+
+    <div class="page-number">5</div>
+</div>
+<div class="page">
+    <h2 class="section-title">怪物移动 + 瞄准 (MONSTERS MOVE + AIM)</h2>
+    
+    <p>怪物通过选择它们想要进入的<b>列 (column)</b>，然后选择一个它们可以从该列发起<b>攻击 (attack FROM)</b> 的目标来进行移动和瞄准。</p>
+    
+    <ul>
+        <li>怪兽的算子 (meeple) 指向它攻击的方向。</li>
+        <li>如果在它们选择的列中有多个合法的目标可供瞄准，它们会使用一个<b>目标优先级指南针 (compass)</b> 来挑选一个。
+            <ul class="sub-list">
+                <li>始终使用怪物骰子旁的指南针。它每一轮都会改变。</li>
+            </ul>
+        </li>
+        <li>如果在该列中有多个有效的格子可以用来攻击选定的目标，它们会再次使用<b>指南针</b>来挑选其中一个。</li>
+        <li>怪物不会进入水域，也不会停在会干扰（改变目标）其他怪物已瞄准攻击的格子上。
+            <ul class="sub-list">
+                <li>飞行怪物忽略水域。跳跃怪物可以跨越水域。</li>
+            </ul>
+        </li>
+    </ul>
+
+    <p>怪物总是从选择<b>怪物骰 (monster die)</b> 显示的点数（1-6，从左往右数）对应的列开始。</p>
+    
+    <ul>
+        <li>如果怪物无法从该列发起瞄准攻击（因为移动力不足，或者没有目标），它们会<b>寻觅 (seek)</b> 一个可以瞄准攻击的列。
+            <ul class="sub-list">
+                <li>始终使用怪物骰子旁的<b>寻觅图标 (seek icon)</b>。</li>
+                <li>从怪物骰对应的列开始，按寻觅方向尝试每一列（循环查找/wrapping around），直到找到一列是该怪物可以<b>移动到 (move to)</b> 且能从中<b>发起攻击 (attack something)</b> 的。</li>
+            </ul>
+        </li>
+    </ul>
+
+    <div class="example-text">
+        在左侧的示例中，激活从第 2 张卡牌开始，即怪物骰所在的位置。
+        <span class="highlight-purple">橙色恶魔 (The orange Demon)</span> 将移动到 <span class="highlight-purple">第 4 列</span>（怪物骰点数）并寻找目标。它拥有 2 点移动力且其攻击命中相邻格子。它可以从第 4 列移动并攻击建筑 A、建筑 B 或位于第 4 列的机甲 C。当前的指南针优先选择东侧 (East) 目标，剩下 A 或 C；随后它优先选择南侧 (South)，导致恶魔移动并瞄准 C。
+        <br><br>
+        <span class="highlight-purple">红色幽灵 (The red Wraith)</span> 怪物将移动到 <span class="highlight-purple">第 4 列</span>（怪物骰点数），它拥有 3 点移动力及类似的攻击方式。它可以从第 5 列攻击建筑 A、建筑 B 或建筑 C。使用相同的指南针，东侧目标优先，因此它移动并瞄准 A（飞行怪物可以移动过任何格子，包括水域、山脉、建筑和敌方单位）。
+    </div>
+    <div class="page-number">6</div>
+</div>
+
+<div class="page">
+    <p><b>如果怪物无法攻击任何目标：</b></p>
+    <ul>
+        <li>它会朝着“假设拥有无限移动力时能攻击到的最近目标”<b>尽可能远地移动 (as far as it can)</b>。如有需要，使用指南针决定目标和格子。如果即便无限移动也够不着任何目标，它不移动。</li>
+        <li><b>将算子竖立 (Stand its meeple upright)</b> 以表示它本回合<b>不进行攻击 (not attacking)</b>。</li>
+        <li>注意某些 <b>Alpha 怪物</b> 的攻击会伤害多个格子，这可能允许它们从以前无法瞄准的位置发动攻击（见战役章节）。</li>
+    </ul>
+
+    <h2 class="section-title">怪物攻击 (MONSTERS ATTACK)</h2>
+    <p>在此步骤中，存活的怪物结算其瞄准的攻击，即使它们已被移动或目标已改变。</p>
+
+    <h2 class="section-title">探测 (DETECT)</h2>
+    <p>在此步骤中，供应堆中的所有怪物 HP 方块都被放置在地图上以显示被探测到的怪物。<b>生成格 (Spawn tiles)</b> 上有红色的数字。</p>
+    <ul>
+        <li>怪物骰的<b>位置 (location)</b> 显示哪种类型的怪物将首先被探测，其<b>点数 (value)</b> 显示在哪个生成格上探测它。</li>
+        <li>将第一个方块放在对应怪物骰点数的生成格上。将相应的算子放在带怪物骰的怪物卡上。
+            <ul class="sub-list">
+                <li>如果生成格已被单位占用或已有 HP 方块，根据需要<b>增加 1 (increase by 1)</b>；点数超过 8 则循环。</li>
+            </ul>
+        </li>
+        <li>下一组方块/算子对归属于怪物骰<b>左侧 (to the left)</b> 的卡牌，依此类推。如有需要则循环。每次使用下一个更高数值的生成格，同样若格子被占用则增加 1。</li>
+        <li>每张卡关联怪物不超过 2 只；如有需要移至下一张卡。</li>
+        <li>地图上的 HP 方块还不是单位……目前还不是！</li>
+    </ul>
+
+    <div class="example-text">
+        在右侧的示例中，供应堆中有 3 组怪物方块/算子。无论选择哪种颜色，第一对将探测一只 <span class="highlight-purple">恶魔 (Demon)</span>（即带有怪物骰的那张卡），因为它关联的算子尚未达到 2 只的上限。红色方块放在 <span class="highlight-purple">生成格 4 (spawn tile 4)</span>（怪物骰点数）以显示探测结果，相关的红色算子放在恶魔卡上。下一探测是一只粉色 <span class="highlight-purple">幽灵 (Wraith)</span>，放在 <span class="highlight-purple">生成格 6</span>（因为绿色机甲占据了生成格 5），随后是一只紫色 <span class="highlight-purple">梦魇 (Nightmare)</span>，放在 <span class="highlight-purple">生成格 7</span>。
+    </div>
+<div class="page-number">7</div>
+</div>
+<div class="page">
+    <h2 class="section-title">生成 (SPAWN)</h2>
+    
+    <p>在此步骤中，将地图上的每个 <b>HP 方块（探测结果/detections）</b>替换为其对应的<b>算子 (meeple)</b>。怪物以满血状态生成。</p>
+    
+    <p>如果格子被堵塞（因为已经有单位在那里），则<b>没有任何物体生成 (nothing spawns)</b>，方块/算子回到供应堆，且<b>堵路单位受到 1 点撞击伤害 (bump damage)</b>。</p>
+    
+    <p>移动你的机甲来阻挡怪物生成，或者（更好的是）推移现有的怪物使它们阻挡生成，都是控制怪物数量的好方法。</p>
+
+    <div class="diagram-container">
+        <span class="diagram-label">图示布局与生成细节说明 (Diagram Context)</span>
+                <!-- 此处预留图片位置，后期请在 src 中插入您的图片链接 -->
+        <img src="https://img.xiaopiu.com/userImages/img133719db4c86830.png" alt="Spawn Rule Diagram" class="content-image1" style="width:80%;height:auto;display:block;margin:0 auto;">
+        <div class="diagram-content">
+            <p><b>地图展示：</b>展示了探测阶段后的状态。4 号生成格有一个橙色怪物算子；5 号生成格被绿色机甲占据（带有灰色删除线）；6 号生成格有一个红色 HP 方块；7 号生成格有一个紫色 HP 方块。</p>
+            <p><b>侧边文字标注：</b>
+                <br>• <span class="highlight-red">SPAWN TILE 4</span>
+                <br>• <del style="color:#999;">SPAWN TILE 5</del>
+                <br>• <span class="highlight-red">SPAWN TILE 6</span>
+                <br>• <span class="highlight-purple">SPAWN TILE 7</span>
+            </p>
+            <p><b>卡牌侦测说明：</b>底部展示了三张怪物卡（NIGHTMARE, DEMON, WRAITH）。
+                <br>1. <b>DEMON</b> 卡牌上方是红色算子，标有数字 1。
+                <br>2. <b>WRAITH</b> 卡牌上方是粉色算子，标有数字 2。
+                <br>3. <b>NIGHTMARE</b> 卡牌内是紫色算子，标有数字 3。
+                <br>底部的红色“DETECT”箭头展示了从中间卡牌（带有怪物骰）开始的探测流动顺序。
+            </p>
+        </div>
+
+
+    </div>
+<div class="page-number">8</div>
+</div>
+
+<div class="page">
+    <h2 class="section-title">状态标记 (STATUS TOKENS)</h2>
+    
+    <p>状态标记放置在地图上或附着在单位上。</p>
+    
+    <ol>
+        <li><b>岩石 (Rock)：</b>被视为一个拥有 1 HP 的单位。如果怪物找不到其他目标，它们会攻击岩石。机甲和怪物不能穿过岩石（除非它们正在飞行或跳跃）。</li>
+        <li><b>烟雾 (Smoke)：</b>停留在格子上。位于该格子上的单位无法攻击。怪物不会尝试从烟雾格发起瞄准攻击。</li>
+        <li><b>火焰 (Fire)：</b>停留在地图上，直到有单位停在它的格子上，然后附着到该单位。在维护阶段 (Upkeep)，每回合对该单位造成 1 点效果伤害。</li>
+        <li><b>冰冻 (Frozen)：</b>附着在单位或建筑上。被冰冻的目标无法移动或攻击。如果目标即将受到伤害，防止该伤害并改为移除此标记。怪物会攻击被冰冻的目标（包括怪物）。</li>
+        <li><b>护盾 (Shield)：</b>附着在单位或建筑上。如果目标即将受到伤害，防止该伤害并改为移除此标记。</li>
+        <li><b>酸液 (Acid)：</b>停留在地图上，直到有单位停在它的格子上，然后附着到该单位。该单位从 💥 攻击中受到的伤害 +1（但不包括撞击伤害、火焰伤害等）。</li>
+    </ol>
+
+    <p>如果位于同一个格子上，状态标记的两面会互相<b>覆盖 (overwrite)</b>；例如，将火焰添加到冰冻单位上将移除冰冻。如果两个已有的、冲突的标记由于移动而聚在一起（例如一个带护盾的机甲走进酸液格），选择移除哪一个标记。如果你需要添加一个状态标记但供应堆中已没有剩余，通过从场上移除一个标记来释放资源。</p>
+    
+    <p><b>机甲可以跳过攻击以移除任意数量的附着状态。</b></p>
+
+    <div class="diagram-container">
+        <span class="diagram-label">战役卡与目标示例 (Diagram Context)</span>
+        <div class="diagram-content">
+            <p><b>CAMPAIGN CARD (战役卡)：</b></p>
+            <p>• <b>左侧圆圈 (GAME 1)：</b>展示了战役进度的选择。下方标注了 <span class="highlight-goal">▼ GOAL</span>（目标）：结束时地图上只有 0 或 1 个废墟。</p>
+            <p>• <b>中间地图布局：</b>展示了 Sector L 和 Sector R 的拼接，带有 Turn 1 至 Turn 5 的标记。左侧 Sector 有森林和沙地地形。</p>
+            <p>• <b>右侧说明 (★ GOAL)：</b>展示了另一个目标示例：利用风暴 (storm) 杀死一只怪物。在第 2-5 回合期间，风暴会杀死本区域对应格子上的单位。</p>
+        </div>
+
+        <!-- 预留图片位置 -->
+        <img src="https://img.xiaopiu.com/userImages/img133819db4c8ae80.png" alt="Status Tokens and Campaign Card Diagram" class="content-image1" style="width:80%;height:auto;display:block;margin:10px auto;">
+    </div>
+<div class="page-number">9</div>
+</div>
+
+<div class="page">
+    <h2 class="section-title">战役 (CAMPAIGN)</h2>
+    
+    <p>游玩战役会引入额外的机制。在每场游戏结束后：</p>
+    
+    <ol>
+        <li><b>战役骰子</b>沿<b>轨道 (track)</b>移动到下一场游戏，并重置为数值 6。</li>
+        <li>地图上的<b>废墟 (Ruins)</b>丢失（从战役的剩余部分中移除）。</li>
+        <li>如果一台<b>机甲死亡 (died)</b>，其飞行员将失去他们所有的升级（见下文）。在整个战役过程中，将使用相同的 2 台机甲和飞行员。</li>
+        <li>完成目标可获得<b>奖励 (Rewards)</b>。</li>
+        <li>为下一场游戏<b>重新抽取 (redrawn)</b>怪物和地图卡。</li>
+    </ol>
+
+    <p>战役卡为每场游戏的左/右地图卡显示了<b>符号 (symbols)</b>；找到并塞入相应的目标卡以在每场游戏中增加<b>目标 (goals)</b>和其他效果。先添加<b>黄色卡牌</b>（它们是特定于地图的），然后随机添加<b>红色卡牌</b>（重新抽取任何重复的卡牌，确保两个目标都是唯一的）。</p>
+
+    <p>在游戏期间完成一个目标将授予战役卡上列出的相应<b>奖励 (reward)</b>（或多项奖励）：</p>
+    <ul>
+        <li><b>A：</b>升级机甲 A 或其飞行员；滑动机甲或飞行员卡以露出下一行升级。升级会改进或增加攻击方式，或者提升机甲的属性。</li>
+        <li><b>B：</b>升级机甲 B 或其飞行员。</li>
+        <li><b>R：</b>将 1 个丢失的废墟标记归还至供应堆（上限为 3）。</li>
+    </ul>
+
+    <p>某些游戏会增加初始怪物和/或 <b>Alpha 怪物</b>的数量。当生成怪物时，Alpha 版本会持续生成，直到达到所列出的 Alpha 数量为止。Alpha 怪物使用其怪物卡上的<b>蓝色属性、攻击方式和 HP 轨道</b>，以此将它们与非 Alpha 怪物区分开来。</p>
+
+    <h2 class="section-title">调整难度 (ADJUSTING DIFFICULTY)</h2>
+    
+    <p>你可以通过以下方式增加战役难度：</p>
+    <ul>
+        <li>减少可用的废墟方块最大数量。</li>
+        <li>在每场游戏的第一回合跳过步骤 1（时间流逝）（使游戏长度增加 1 个回合）。</li>
+        <li>在决战 (finale) 期间激活<b>两张</b>地图卡上的月亮图标。</li>
+    </ul>
+
+    <!-- 预留图片位置 -->
+    <img src="" alt="Campaign and Difficulty Diagram placeholder" class="content-image1">
+<div class="page-number">10</div>
+</div>
+<div class="page">
+    <h2 class="section-title">常见问题 (FAQ)</h2>
+    
+    <div class="sub-section-title">地图 (Map)</div>
+    <ul>
+        <li>地图卡应面向相同方向，以便所有文本都清晰易读。</li>
+        <li>单位不能移动或被推离地图边缘，且地图边缘不会造成撞击伤害。</li>
+        <li>最南端（底部）的一行格子仅显示了一部分，但除此之外其他方面均正常。</li>
+        <li>单位必须瞄准属于地图一部分的格子；它们不能瞄准边缘以外。</li>
+        <li>像 <b>6→</b> 这样的直线弹道攻击，如果没有命中任何其他物体，则会停在边缘前的最后一个地图格子上。</li>
+        <li>如果位于<b>森林 (forest)</b>上的单位受到伤害，会产生一个火焰状态标记并立即附着在该单位上。如果伤害杀死了该单位，火焰随后会消失。</li>
+        <li>如果一次攻击造成了伤害并添加了其自身的状态，该状态可能会覆盖由伤害产生的森林/沙地状态标记。</li>
+        <li><b>空位 (empty tile)</b>是指单位可以结束移动的格子。如果一个格子上已有单位、建筑或山脉，它就不是空位。<b>水域格 (Water tiles)</b>是空位。<b>废墟化的建筑 (Ruined buildings)</b>是空位。</li>
+    </ul>
+
+    <div class="sub-section-title">建筑 (Buildings)</div>
+    <ul>
+        <li>建筑是怪物会尝试攻击的有效目标。它们由小的 <b>+</b> 符号标示。炮塔、火箭等都是建筑。</li>
+        <li>建筑可以被机甲攻击和撞击伤害破坏。建筑本身不能被推移或移动。</li>
+        <li>如果除了护盾或冰冻以外的状态要在建筑上产生，不要放置状态标记。</li>
+        <li>建筑不能在其上方移动或穿过（飞行和跳跃单位可以飞越它们）。</li>
+        <li>带有废墟方块的建筑被视为<b>空位</b>。</li>
+    </ul>
+
+    <div class="sub-section-title">水域 (Water)</div>
+    <ul>
+        <li>水域阻止非飞行机甲进行攻击，并立即杀死非飞行怪物。</li>
+        <li>怪物将水域视为障碍（除非它们可以飞行或跳跃）。</li>
+        <li><b>飞行单位</b>（机甲或怪物）完全忽略水域，可以穿过水域格、停留在其上，并从中发起攻击。</li>
+        <li>机甲可以从水域格开始游戏。</li>
+    </ul>
+
+    <!-- 预留图片位置 -->
+    <!-- <img src="" alt="FAQ and Map Details Diagram placeholder" class="image-placeholder"> -->
+    <div class="page-number">11</div>
+</div>
+<div class="page">
+    <div class="section-title">决战效果 (Finale effects)</div>
+    <ul>
+        <li><b>爆炸怪物：</b>每当一只怪物死亡时，无论以何种方式死亡，它都会对其相邻的 4 个格子造成伤害。请先完成所有推移结算。</li>
+        <li><b>水域：</b>怪物将水域格视为平地格。</li>
+        <li><b>致命列：</b>在效果阶段，所有位于与当前怪物骰点数匹配的列中的机甲都会被杀。</li>
+        <li><b>探测：</b>探测步骤（步骤 5）现在立即发生在生成步骤（步骤 3）之前。这意味着在生成步骤后的地图上几乎总是会有 4 只怪物。</li>
+        <li><b>山脉建筑：</b>将所有山脉视为建筑。</li>
+        <li><b>无限移动：</b>怪物几乎总是能够进行攻击。</li>
+    </ul>
+
+    <div class="section-title">黄色目标卡上的地图效果 (Map effects on yellow objective cards)</div>
+    <ul>
+        <li><b>风暴 (Storm)：</b>此地图卡上的“回合 X”格子将在对应回合的效果阶段杀死在那里的单位（即战役骰显示匹配数值时）。这不计为伤害，因此冰冻/护盾标记无法阻止它。</li>
+        <li><b>洪水 (Flooding)：</b>在整个第 3 回合期间（当战役骰显示为 3 时），“回合 3”格子被视为水域格。第 2 回合期间对“回合 2”格子同理。</li>
+        <li><b>冰封山脉：</b>此卡上的山脉在本次游戏中被视为建筑，且起始带有一个冰冻标记。必须保证该山脉存活并解除冰冻才能达成目标。</li>
+        <li><b>炮塔：</b>炮塔可以在步骤 7（玩家行动）期间进行一次攻击。被冰冻的炮塔无法攻击。</li>
+        <li><b>酸液：</b>静止在这些格子上的单位会被施加酸液标记。直接经过而不停留则不会施加酸液。</li>
+    </ul>
+
+    <div class="section-title">玩家行动 (Player actions)</div>
+    <ul>
+        <li>玩家行动可以按任何顺序进行，例如：移动机甲 A，移动机甲 B，用机甲 B 攻击，用机甲 A 攻击。</li>
+        <li>所有玩家行动都是可选的。</li>
+        <li>机甲一旦发动攻击，该回合就不能再做任何其他事情。</li>
+        <li>通过飞行员升级解锁了第二种攻击方式的机甲，每回合仍只能使用 1 次攻击。</li>
+        <li>机甲可以跳过攻击以移除附着在它们身上的任何状态标记，包括冰冻。这仍会像攻击一样结束该机甲本回合的行动。即使站在水中它们也可以这样做。</li>
+    </ul>
+
+   <div class="page-number">12</div>
+
+</div>
+
+
+<div class="page">
+    <div class="section-title">状态标记 (Status tokens)</div>
+    <ul>
+        <li>单位可以走过火焰和酸液标记而不会附着它们；单位必须<b>停留在该格子上</b>状态才会附着。</li>
+    </ul>
+
+    <div class="section-title">怪物攻击 (Monster attacks)</div>
+    <ul>
+        <li><b>一旦怪物瞄准了一次攻击，无论发生什么，它都会在怪物攻击步骤中执行。</b>即使这会杀死它自己或击中其他怪物。</li>
+        <li>两只怪物（恶魔和入侵者）拥有能够阻止目标移动的攻击。它们仅阻止常规的移动动作（带有足部图标的移动）；目标格子上的单位仍然可以被推移，或使用导致它们移动的攻击。</li>
+        <li>如果溅射伤害（splash damage）能击中其预定目标，Alpha  Herald 怪物会瞄准山脉或地图边缘（但不会瞄准其他怪物）。</li>
+        <li><b>怪物会避免阻挡其他怪物的攻击</b>（它们不会挡在路径上并导致目标改变），但除此之外它们并不关心附带损害（造成损害、走进损害或撞击伤害）。</li>
+        <li>怪物不会尝试从带有烟雾的格子上发起瞄准攻击。</li>
+        <li>怪物在瞄准时不会考虑它们自己的 HP。有时它们会从那些它们无法存活到结算阶段的格子上发起瞄准攻击，原因可能是火焰伤害、地图效果等。</li>
+    </ul>
+
+    <div class="section-title">攻击方向 (Attack directions)</div>
+    <ul>
+        <li>如果一次攻击提到了左/右/后等方向，请将它们视为<b>相对于攻击瞄准的方向</b>。如果你向东发射引力光束（Grav Beam），其目标的左/右格子将分别是北和南。</li>
+        <li>悟空（Wukong）的投掷攻击（Throw attack）必须推向 4 个正交方向之一。</li>
+        <li>流星攻击（Meteor attack）会拉拽目标；其运作方式与推移完全相同，只是方向相反。</li>
+    </ul>
+
+    <div class="section-title">探测与生成 (Detect and Spawn)</div>
+    <ul>
+        <li>地图上一次最多可以存在 4 只怪物，无论初始怪物有多少只。</li>
+        <li>如果在同一回合探测到所有 4 只怪物，请按以下顺序探测：怪物卡 1（或骰子所在的任何位置）、2、3，然后再次回到 1。</li>
+        <li>在作为设置环节的一部分生成怪物后，第一回合将不再生成任何东西，因为此前还没有经过探测步骤。</li>
+        <li>在探测步骤期间，Alpha 怪物的数量并不重要。在生成步骤期间，每次探测将根据当前地图上的 Alpha 数量，变为普通怪物或 Alpha 怪物。每次探测都将是 Alpha，直到达到当前游戏的限制（显示在战役卡上）为止。</li>
+    </ul>
+
+<div class="page-number">13</div>
+</div>
+
+
+<div class="page">
+    <div class="section-title">来自同一张怪物卡的多个怪物 (Multiple monsters from the same monster card)</div>
+    <ul>
+        <li>每张怪物卡最多可以关联 2 个算子 (meeple)（该类型的普通和/或 Alpha 怪物的<b>任何组合</b>）。</li>
+        <li>普通怪物使用左侧 HP 轨道；Alpha 怪物使用右侧。</li>
+        <li>如果一条轨道上已经有一个 HP 方块，且生成的第二只怪物也将使用该轨道，请将第二个 HP 方块<b>向怪物卡中心略微偏移</b>放置（实际上方块位于 2 条隐形“内侧轨道”之一上）。</li>
+        <li>在步骤 4（怪物移动 + 瞄准）期间激活怪物时，卡牌按从左到右的顺序激活，每张卡牌根据其卡牌上 <b>HP 方块从左到右的顺序</b>激活算子。</li>
+        <li>如果一条轨道上有 2 个 HP 方块且其中一只怪物死亡，剩下的那个 HP 方块应当使用印刷好的 HP 轨道。</li>
+    </ul>
+
+    <div class="example-text">
+        另一个供参考的示例（步骤 4，怪物移动 + 瞄准）：粉色梦魇 (pink Nightmare) 首先根据怪物骰的位置激活，其指南针和寻觅箭头生效。在它移动并瞄准后，两只 Alpha 恶魔 (Alpha Demons) 激活，紫色（4 HP）在橙色（3 HP）之前激活。绿色机甲被紫色恶魔定身了！最后红色 Alpha 幽灵 (Alpha Wraith) 激活。
+    </div>
+
+    <div class="diagram-container">
+        <span class="diagram-label">图示布局与移动推演 (Diagram Context)</span>
+        <div class="diagram-content">
+            <p><b>地图部分：</b>左侧展示初始位置，包含蓝/绿骰子机甲、粉色算子、紫色算子、红色算子。右侧展示移动后的状态，带有黑色路径箭头。展示了紫色算子移动到第 6 列并与绿色机甲相邻。</p>
+            <p><b>卡牌部分：</b>展示了 NIGHTMARE, DEMON, WRAITH 三张卡。DEMON 卡上有两个方块（紫色 4HP，橙色 3HP）。怪物骰点数为 1，位于左侧卡牌下方。带有红色的 <b>ACTIVATE</b> 进度条。</p>
+            <p><b>侧边文字：</b>
+                <br>• COLUMN 1 -> <b>COLUMN 2</b> (粉色)
+                <br>• COLUMN 1 -> <b>COLUMN 6</b> (紫色)
+                <br>• COLUMN 1 -> <b>NO TARGET</b> (橙色)
+                <br>• COLUMN 1 -> <b>COLUMN 3</b> (红色)
+            </p>
+        </div>
+
+        <!-- 预留图片位置 -->
+        <img src="https://img.xiaopiu.com/userImages/img133919db4c91fc8.png" alt="Multiple Monsters Activation Diagram" class="content-image1">
+    </div>
+<div class="page-number">14</div>
+</div>
+
+</body>
+
+
+</html>
